@@ -1,0 +1,85 @@
+{
+  "period": {
+    "start": "2026-05-08",
+    "end": "2026-06-27"
+  },
+  "hours_logged": 612,
+  "opportunity_cost_usd": 65000,
+  "opportunity_cost_basis": {
+    "annual_usd": 220000,
+    "hourly_usd": 105.77
+  },
+  "infra_ovh_monthly_usd_range": [
+    15,
+    80
+  ],
+  "ascendant_kofi_monthly_rate_usd_jun_2026": 411,
+  "botwatch_kofi_dashboard_snapshot_2026_06_27": {
+    "runway_months": 5.38,
+    "runway_total_usd": 2210,
+    "runway_updated": "2026-05-27",
+    "kofi_tiers_usd": {
+      "min_tip": 5,
+      "member_sub": 12
+    },
+    "donations": {
+      "tips": 50,
+      "people": 14,
+      "subs": 6,
+      "named_subs": "1/6",
+      "hidden_from_public_feed": 38,
+      "min_floor_cumulative_usd": 322
+    },
+    "infrastructure": {
+      "published_monthly_usd": 411,
+      "estimated_infra_monthly_usd": 55,
+      "published_gap_usd": 356,
+      "kofi_est_monthly_usd": 192,
+      "vs_published_pct": 47,
+      "vs_est_infra_pct": 349
+    },
+    "note": "Investigator BotWatch Ko-fi Donors dashboard, not operator-published. Min floor ($322) uses tier minimums on each event; public kofi-cumulative-bands.json floor ($1177 Jun) uses creator-dashboard exact amounts on the Jun 14 cluster. Both are valid lower-bound scenarios."
+  },
+  "ascendant_infra_estimate_generous_usd_monthly": 55,
+  "ascendant_infra_estimate_breakdown_usd_monthly": {
+    "ovh_web_portal": 28,
+    "residential_electricity": 22,
+    "isp_marginal": 5
+  },
+  "ascendant_infra_estimate_note": "Generous investigator estimate for probe-confirmed infrastructure only: OVH website/CDN, 24/7 home-server electricity, marginal residential ISP uplift. Excludes operator labor, dev tooling, eqemulator.dev login OVH Canada, and hardware replacement capex. Total operation including labor could meet or exceed the public ~$411/mo runway rate; the transparency gap is that Ko-fi presents that figure as hosting/infrastructure burn without category split.",
+  "author_belvue_vps_annual_usd": 50,
+  "author_belvue_vps_amortized_monthly_usd": 4.17,
+  "author_belvue_vps_note": "OVH US VPS, yearly promo invoice ~$50; author-stated. Public: static TLS site only. Comparison baseline for ch 11 web-edge cost only, not game hosting.",
+  "cursor_api_logs_present": true,
+  "cursor_api_files": [
+    "usage-events-2026-06-27.csv"
+  ],
+  "cursor_retail_rates": {
+    "cursor_pro_monthly": 20.0,
+    "api_overage_per_1m_tokens": 8.0
+  },
+  "cursor_api_retail_usd": 24765.69,
+  "cursor_api_on_demand_usd": 20.46,
+  "cursor_api_included_tokens": 3093153524,
+  "cursor_api_parsed_at": "2026-06-27T05:07:47Z",
+  "note": "Sum on-demand Cost column plus Included Total Tokens at $8.0/1M tokens (retail-equivalent; not actual invoice).",
+  "cursor_api_parse": {
+    "source_file": "usage-events-2026-06-27.csv",
+    "rows_total": 3642,
+    "rows_in_period": 3561,
+    "csv_date_range": {
+      "start": "2026-04-06",
+      "end": "2026-06-26"
+    },
+    "on_demand_usd": 20.46,
+    "on_demand_tokens": 63456156,
+    "included_tokens": 3093153524,
+    "included_retail_usd": 24745.23,
+    "cursor_api_retail_usd": 24765.69,
+    "retail_rates": {
+      "cursor_pro_monthly": 20.0,
+      "api_overage_per_1m_tokens": 8.0
+    },
+    "method": "Sum on-demand Cost column plus Included Total Tokens at $8.0/1M tokens (retail-equivalent; not actual invoice)."
+  }
+}
