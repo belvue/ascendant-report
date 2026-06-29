@@ -113,24 +113,25 @@ body.close .content {
 
 .report-sidebar-sub {
   font-family: var(--font-body);
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ac-text-subtle);
+  color: var(--ac-text-muted);
 }
 
 .sidebar-nav {
-  padding: 0.5rem 0 2rem;
+  padding: 0.65rem 0 2rem;
 }
 
 .sidebar-nav li a {
   display: block;
-  padding: 0.4rem 1rem 0.4rem 1.15rem;
-  font-size: 0.8125rem;
-  font-weight: 450;
-  line-height: 1.35;
-  color: var(--ac-text-muted);
+  padding: 0.48rem 1rem 0.48rem 1.15rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--ac-text);
   border-left: 2px solid transparent;
   white-space: normal;
   overflow: visible;
@@ -147,20 +148,26 @@ body.close .content {
 
 .sidebar-nav li.active > a {
   color: var(--ac-accent);
-  background: rgba(199, 166, 90, 0.1);
-  border-left-color: rgba(199, 166, 90, 0.55);
-  font-weight: 500;
+  background: rgba(199, 166, 90, 0.12);
+  border-left-color: var(--ac-accent);
+  font-weight: 600;
 }
 
 .sidebar-nav > ul > li > p,
 .sidebar-nav > ul > li > strong {
-  margin: 1.25rem 1rem 0.35rem;
-  font-family: var(--font-heading);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  margin: 1.35rem 1rem 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ac-text-subtle);
+  color: var(--ac-text-muted);
+}
+
+.sidebar-nav ul ul li a {
+  padding-left: 1.35rem;
+  font-size: 0.875rem;
+  color: color-mix(in srgb, var(--ac-text) 92%, var(--ac-text-muted));
 }
 
 .content {
@@ -345,16 +352,33 @@ body.close .content {
 
 .markdown-section blockquote {
   margin: 1.5rem 0;
-  padding: 0.85rem 1.1rem;
-  color: var(--ac-text-subtle);
-  background: rgba(255, 255, 255, 0.03);
-  border-left: 3px solid rgba(199, 166, 90, 0.45);
+  padding: 1rem 1.25rem;
+  color: var(--ac-text);
+  background: rgba(199, 166, 90, 0.07);
+  border-left: 3px solid rgba(199, 166, 90, 0.6);
   border-radius: 0 var(--ac-radius) var(--ac-radius) 0;
-  font-style: italic;
+  font-style: normal;
+  font-size: 1.02rem;
+  line-height: 1.75;
 }
 
 .markdown-section blockquote p {
   margin: 0;
+  color: var(--ac-text);
+}
+
+.markdown-section blockquote a {
+  color: var(--ac-accent);
+  border-bottom-color: rgba(199, 166, 90, 0.45);
+}
+
+.markdown-section blockquote a:hover {
+  color: var(--ac-accent-hover);
+  border-bottom-color: rgba(212, 184, 114, 0.65);
+}
+
+.markdown-section blockquote strong {
+  color: var(--ac-text);
 }
 
 .markdown-section hr {
