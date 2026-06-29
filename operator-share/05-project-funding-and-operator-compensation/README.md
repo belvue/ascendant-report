@@ -16,23 +16,23 @@ Donation **receipt totals**, Ko-fi feed behavior, trust hub, and informed-consen
 
 | ID | Title | File |
 |----|-------|------|
-| PF-001 | Funding categories are not separated in public appeals | [P1-high/PF-001-funding-categories-not-separated.md](P1-high/PF-001-funding-categories-not-separated.md) |
-| PF-002 | Infrastructure costs vs labor effort are not distinguished | [P1-high/PF-002-infrastructure-vs-labor-not-distinguished.md](P1-high/PF-002-infrastructure-vs-labor-not-distinguished.md) |
-| PF-006 | Public funding model - allocation priorities not defined | [P1-high/PF-006-public-funding-model-not-defined.md](P1-high/PF-006-public-funding-model-not-defined.md) |
+| PF-001 | Funding categories are not separated in public appeals | [P1-high/PF-001-funding-categories-not-separated.md](/operator-share/05-project-funding-and-operator-compensation/P1-high/PF-001-funding-categories-not-separated.md) |
+| PF-002 | Infrastructure costs vs labor effort are not distinguished | [P1-high/PF-002-infrastructure-vs-labor-not-distinguished.md](/operator-share/05-project-funding-and-operator-compensation/P1-high/PF-002-infrastructure-vs-labor-not-distinguished.md) |
+| PF-006 | Public funding model - allocation priorities not defined | [P1-high/PF-006-public-funding-model-not-defined.md](/operator-share/05-project-funding-and-operator-compensation/P1-high/PF-006-public-funding-model-not-defined.md) |
 
 ### P2 - Medium
 
 | ID | Title | File |
 |----|-------|------|
-| PF-003 | Reserve targets and rationale not explicitly disclosed | [P2-medium/PF-003-reserve-targets-not-disclosed.md](P2-medium/PF-003-reserve-targets-not-disclosed.md) |
-| PF-004 | Capital hardware vs monthly operating costs not explained | [P2-medium/PF-004-capital-vs-operating-costs-not-explained.md](P2-medium/PF-004-capital-vs-operating-costs-not-explained.md) |
-| PF-005 | Compensation policy for operators, devs, and stewards not published | [P2-medium/PF-005-compensation-policy-not-documented.md](P2-medium/PF-005-compensation-policy-not-documented.md) |
+| PF-003 | Reserve targets and rationale not explicitly disclosed | [P2-medium/PF-003-reserve-targets-not-disclosed.md](/operator-share/05-project-funding-and-operator-compensation/P2-medium/PF-003-reserve-targets-not-disclosed.md) |
+| PF-004 | Capital hardware vs monthly operating costs not explained | [P2-medium/PF-004-capital-vs-operating-costs-not-explained.md](/operator-share/05-project-funding-and-operator-compensation/P2-medium/PF-004-capital-vs-operating-costs-not-explained.md) |
+| PF-005 | Compensation policy for operators, devs, and stewards not published | [P2-medium/PF-005-compensation-policy-not-documented.md](/operator-share/05-project-funding-and-operator-compensation/P2-medium/PF-005-compensation-policy-not-documented.md) |
 
 ### P3 - Informational
 
 | ID | Title | File |
 |----|-------|------|
-| PF-007 | Example funding-category disclosure model (optional template) | [P3-informational/PF-007-example-funding-disclosure-model.md](P3-informational/PF-007-example-funding-disclosure-model.md) |
+| PF-007 | Example funding-category disclosure model (optional template) | [P3-informational/PF-007-example-funding-disclosure-model.md](/operator-share/05-project-funding-and-operator-compensation/P3-informational/PF-007-example-funding-disclosure-model.md) |
 
 ---
 

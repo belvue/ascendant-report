@@ -69,10 +69,45 @@
           '15-closing-statements.md': 1,
           'evidence-index.md': 1,
         };
+        var briefByPrefix = {
+          LS: 'operator-share/01-loginserver-brief',
+          RH: 'operator-share/02-residential-host-brief',
+          DT: 'operator-share/03-transparency-and-accountability',
+          KF: 'operator-share/03-transparency-and-accountability',
+          TR: 'operator-share/03-transparency-and-accountability',
+          PC: 'operator-share/04-client-patcher-integrity',
+          PF: 'operator-share/05-project-funding-and-operator-compensation',
+        };
+
+        function canonicalFinding(path) {
+          var clean = (path || '').replace(/^\//, '').replace(/\.md$/i, '');
+          if (!clean) return null;
+          var slugMatch = clean.match(/([A-Z]{2,3}-\d{3}-[a-z0-9-]+)$/i);
+          if (!slugMatch) return null;
+          var slug = slugMatch[1];
+          var prefix = slug.match(/^([A-Z]{2,3})-/)[1];
+          var brief = briefByPrefix[prefix];
+          if (!brief) return null;
+          if (clean.indexOf(brief + '/') === 0) return null;
+          var tierMatch = clean.match(/(P[0-3]-(?:immediate|high|medium|informational))\//);
+          if (!tierMatch) return null;
+          return '/' + brief + '/' + tierMatch[1] + '/' + slug + '.md';
+        }
 
         hook.beforeEach(function (content, next) {
           var path = (vm.route.path || '').replace(/^\//, '');
-          if (!path || path.indexOf('/') === -1) {
+          if (!path) {
+            next(content);
+            return;
+          }
+
+          var findingTarget = canonicalFinding(path);
+          if (findingTarget) {
+            vm.router.to(findingTarget);
+            return;
+          }
+
+          if (path.indexOf('/') === -1) {
             next(content);
             return;
           }

@@ -14,29 +14,29 @@
 
 | ID | Title | File |
 |----|-------|------|
-| PC-001 | Patch CDN serves files over HTTP (no TLS) | [P0-immediate/PC-001-http-patch-cdn.md](P0-immediate/PC-001-http-patch-cdn.md) |
-| PC-002 | MacroQuest-class `dinput8.dll` deployed without patcher UI disclosure | [P0-immediate/PC-002-dinput8-mq-hook-deployed-silently.md](P0-immediate/PC-002-dinput8-mq-hook-deployed-silently.md) |
+| PC-001 | Patch CDN serves files over HTTP (no TLS) | [P0-immediate/PC-001-http-patch-cdn.md](/operator-share/04-client-patcher-integrity/P0-immediate/PC-001-http-patch-cdn.md) |
+| PC-002 | MacroQuest-class `dinput8.dll` deployed without patcher UI disclosure | [P0-immediate/PC-002-dinput8-mq-hook-deployed-silently.md](/operator-share/04-client-patcher-integrity/P0-immediate/PC-002-dinput8-mq-hook-deployed-silently.md) |
 
 ### P1 - High (login routing mechanism)
 
 | ID | Title | File |
 |----|-------|------|
-| PC-010 | CDN `eqhost.txt` routes login to `login.eqemulator.dev` | [P1-high/PC-010-eqhost-login-redirect-via-cdn.md](P1-high/PC-010-eqhost-login-redirect-via-cdn.md) |
+| PC-010 | CDN `eqhost.txt` routes login to `login.eqemulator.dev` | [P1-high/PC-010-eqhost-login-redirect-via-cdn.md](/operator-share/04-client-patcher-integrity/P1-high/PC-010-eqhost-login-redirect-via-cdn.md) |
 
 ### P2 - Medium (remote control, autoPatch behavior)
 
 | ID | Title | File |
 |----|-------|------|
-| PC-020 | `autoPatch: true` re-applies CDN files on every patch cycle | [P2-medium/PC-020-autopatch-reapplies-cdn-files.md](P2-medium/PC-020-autopatch-reapplies-cdn-files.md) |
-| PC-021 | Operator can change deployed files from CDN without patcher release | [P2-medium/PC-021-remote-cdn-file-swap.md](P2-medium/PC-021-remote-cdn-file-swap.md) |
+| PC-020 | `autoPatch: true` re-applies CDN files on every patch cycle | [P2-medium/PC-020-autopatch-reapplies-cdn-files.md](/operator-share/04-client-patcher-integrity/P2-medium/PC-020-autopatch-reapplies-cdn-files.md) |
+| PC-021 | Operator can change deployed files from CDN without patcher release | [P2-medium/PC-021-remote-cdn-file-swap.md](/operator-share/04-client-patcher-integrity/P2-medium/PC-021-remote-cdn-file-swap.md) |
 
 ### P3 - Informational (static analysis limits, positive notes)
 
 | ID | Title | File |
 |----|-------|------|
-| PC-030 | Patcher binary - no credential-handling code found | [P3-informational/PC-030-patcher-no-credential-code.md](P3-informational/PC-030-patcher-no-credential-code.md) |
-| PC-031 | `dinput8` - hook framework; no exfiltration found in static review | [P3-informational/PC-031-dinput8-static-analysis-limits.md](P3-informational/PC-031-dinput8-static-analysis-limits.md) |
-| PC-032 | Login redirect is CDN `eqhost.txt`, not hardcoded in patcher exe | [P3-informational/PC-032-login-via-eqhost-not-exe-hardcode.md](P3-informational/PC-032-login-via-eqhost-not-exe-hardcode.md) |
+| PC-030 | Patcher binary - no credential-handling code found | [P3-informational/PC-030-patcher-no-credential-code.md](/operator-share/04-client-patcher-integrity/P3-informational/PC-030-patcher-no-credential-code.md) |
+| PC-031 | `dinput8` - hook framework; no exfiltration found in static review | [P3-informational/PC-031-dinput8-static-analysis-limits.md](/operator-share/04-client-patcher-integrity/P3-informational/PC-031-dinput8-static-analysis-limits.md) |
+| PC-032 | Login redirect is CDN `eqhost.txt`, not hardcoded in patcher exe | [P3-informational/PC-032-login-via-eqhost-not-exe-hardcode.md](/operator-share/04-client-patcher-integrity/P3-informational/PC-032-login-via-eqhost-not-exe-hardcode.md) |
 
 ---
 

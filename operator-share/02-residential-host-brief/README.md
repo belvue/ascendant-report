@@ -13,28 +13,28 @@
 
 | ID | Title | File |
 |----|-------|------|
-| RH-001 | ATLAS admin UI reachable without authentication gate | [P0-immediate/RH-001-atlas-admin-ui-exposed.md](P0-immediate/RH-001-atlas-admin-ui-exposed.md) |
-| RH-002 | Unauthenticated `/api/admin/settings` information disclosure | [P0-immediate/RH-002-atlas-admin-api-unauthenticated.md](P0-immediate/RH-002-atlas-admin-api-unauthenticated.md) |
-| RH-003 | SSH (OpenSSH) exposed to the internet on game host | [P0-immediate/RH-003-ssh-internet-exposed.md](P0-immediate/RH-003-ssh-internet-exposed.md) |
+| RH-001 | ATLAS admin UI reachable without authentication gate | [P0-immediate/RH-001-atlas-admin-ui-exposed.md](/operator-share/02-residential-host-brief/P0-immediate/RH-001-atlas-admin-ui-exposed.md) |
+| RH-002 | Unauthenticated `/api/admin/settings` information disclosure | [P0-immediate/RH-002-atlas-admin-api-unauthenticated.md](/operator-share/02-residential-host-brief/P0-immediate/RH-002-atlas-admin-api-unauthenticated.md) |
+| RH-003 | SSH (OpenSSH) exposed to the internet on game host | [P0-immediate/RH-003-ssh-internet-exposed.md](/operator-share/02-residential-host-brief/P0-immediate/RH-003-ssh-internet-exposed.md) |
 
 ### P1 - High (continuity, trust, co-location risk)
 
 | ID | Title | File |
 |----|-------|------|
-| RH-010 | Live game world hosted on consumer residential broadband | [P1-high/RH-010-residential-game-hosting.md](P1-high/RH-010-residential-game-hosting.md) |
-| RH-011 | Split infrastructure (OVH web vs home game) not disclosed to players | [P1-high/RH-011-hosting-topology-disclosure-gap.md](P1-high/RH-011-hosting-topology-disclosure-gap.md) |
-| RH-012 | ATLAS control plane degraded while admin UI remains public | [P1-high/RH-012-atlas-backend-degraded.md](P1-high/RH-012-atlas-backend-degraded.md) |
-| RH-013 | Game, SSH, and enterprise admin stack on one residential IP | [P1-high/RH-013-colocated-attack-surface.md](P1-high/RH-013-colocated-attack-surface.md) |
-| RH-014 | Player world path terminates on residential IP after federation login | [P1-high/RH-014-login-vs-world-network-split.md](P1-high/RH-014-login-vs-world-network-split.md) |
+| RH-010 | Live game world hosted on consumer residential broadband | [P1-high/RH-010-residential-game-hosting.md](/operator-share/02-residential-host-brief/P1-high/RH-010-residential-game-hosting.md) |
+| RH-011 | Split infrastructure (OVH web vs home game) not disclosed to players | [P1-high/RH-011-hosting-topology-disclosure-gap.md](/operator-share/02-residential-host-brief/P1-high/RH-011-hosting-topology-disclosure-gap.md) |
+| RH-012 | ATLAS control plane degraded while admin UI remains public | [P1-high/RH-012-atlas-backend-degraded.md](/operator-share/02-residential-host-brief/P1-high/RH-012-atlas-backend-degraded.md) |
+| RH-013 | Game, SSH, and enterprise admin stack on one residential IP | [P1-high/RH-013-colocated-attack-surface.md](/operator-share/02-residential-host-brief/P1-high/RH-013-colocated-attack-surface.md) |
+| RH-014 | Player world path terminates on residential IP after federation login | [P1-high/RH-014-login-vs-world-network-split.md](/operator-share/02-residential-host-brief/P1-high/RH-014-login-vs-world-network-split.md) |
 
 ### P2 - Medium (hardening, optics, configuration hygiene)
 
 | ID | Title | File |
 |----|-------|------|
-| RH-020 | Production deploy leaks dev configuration (localhost OG tags) | [P2-medium/RH-020-dev-config-in-production.md](P2-medium/RH-020-dev-config-in-production.md) |
-| RH-021 | TLS certificate mismatch when accessing host by raw IP | [P2-medium/RH-021-tls-cert-ip-mismatch.md](P2-medium/RH-021-tls-cert-ip-mismatch.md) |
-| RH-022 | Alternate HTTP port 8080 open on game host | [P2-medium/RH-022-port-8080-exposed.md](P2-medium/RH-022-port-8080-exposed.md) |
-| RH-024 | Ascendant game residential while sister server ProFusion on OVH | [P2-medium/RH-024-profusion-ascendant-hosting-split.md](P2-medium/RH-024-profusion-ascendant-hosting-split.md) |
+| RH-020 | Production deploy leaks dev configuration (localhost OG tags) | [P2-medium/RH-020-dev-config-in-production.md](/operator-share/02-residential-host-brief/P2-medium/RH-020-dev-config-in-production.md) |
+| RH-021 | TLS certificate mismatch when accessing host by raw IP | [P2-medium/RH-021-tls-cert-ip-mismatch.md](/operator-share/02-residential-host-brief/P2-medium/RH-021-tls-cert-ip-mismatch.md) |
+| RH-022 | Alternate HTTP port 8080 open on game host | [P2-medium/RH-022-port-8080-exposed.md](/operator-share/02-residential-host-brief/P2-medium/RH-022-port-8080-exposed.md) |
+| RH-024 | Ascendant game residential while sister server ProFusion on OVH | [P2-medium/RH-024-profusion-ascendant-hosting-split.md](/operator-share/02-residential-host-brief/P2-medium/RH-024-profusion-ascendant-hosting-split.md) |
 
 _Donation / Ko-fi / runway findings moved to [03-transparency-and-accountability](../03-transparency-and-accountability/README.md) (formerly RH-023 → DT-001)._
 
@@ -42,11 +42,11 @@ _Donation / Ko-fi / runway findings moved to [03-transparency-and-accountability
 
 | ID | Title | File |
 |----|-------|------|
-| RH-030 | ISP abuse report sent to AT&T (2026-06-12) | [P3-informational/RH-030-att-abuse-report-sent.md](P3-informational/RH-030-att-abuse-report-sent.md) |
-| RH-031 | Re-probe 2026-06-13 - no remediation observed | [P3-informational/RH-031-reprobe-unchanged.md](P3-informational/RH-031-reprobe-unchanged.md) |
-| RH-032 | Anonymous ATLAS write access not demonstrated | [P3-informational/RH-032-atlas-write-access-unverified.md](P3-informational/RH-032-atlas-write-access-unverified.md) |
-| RH-033 | Zone ports not exposed to internet (730x closed) | [P3-informational/RH-033-zone-ports-not-exposed.md](P3-informational/RH-033-zone-ports-not-exposed.md) |
-| RH-034 | Database ports not exposed (3306/6379 closed) | [P3-informational/RH-034-database-ports-closed.md](P3-informational/RH-034-database-ports-closed.md) |
+| RH-030 | ISP abuse report sent to AT&T (2026-06-12) | [P3-informational/RH-030-att-abuse-report-sent.md](/operator-share/02-residential-host-brief/P3-informational/RH-030-att-abuse-report-sent.md) |
+| RH-031 | Re-probe 2026-06-13 - no remediation observed | [P3-informational/RH-031-reprobe-unchanged.md](/operator-share/02-residential-host-brief/P3-informational/RH-031-reprobe-unchanged.md) |
+| RH-032 | Anonymous ATLAS write access not demonstrated | [P3-informational/RH-032-atlas-write-access-unverified.md](/operator-share/02-residential-host-brief/P3-informational/RH-032-atlas-write-access-unverified.md) |
+| RH-033 | Zone ports not exposed to internet (730x closed) | [P3-informational/RH-033-zone-ports-not-exposed.md](/operator-share/02-residential-host-brief/P3-informational/RH-033-zone-ports-not-exposed.md) |
+| RH-034 | Database ports not exposed (3306/6379 closed) | [P3-informational/RH-034-database-ports-closed.md](/operator-share/02-residential-host-brief/P3-informational/RH-034-database-ports-closed.md) |
 
 ---
 
