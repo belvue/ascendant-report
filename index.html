@@ -16,8 +16,13 @@
   <div id="app">Loading report…</div>
   <script>
     window.$docsify = {
+      name:
+        '<div class="report-sidebar-brand">' +
+        '<span class="report-sidebar-title">Ascendant EQ</span>' +
+        '<span class="report-sidebar-sub">Investigation Report</span>' +
+        '</div>',
       homepage: 'README.md',
-      loadSidebar: false,
+      loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
       relativePath: true,
@@ -37,6 +42,14 @@
     };
 
     window.$docsify.plugins = [].concat(window.$docsify.plugins || [], [
+      function pinSidebar(hook) {
+        hook.mounted(function () {
+          document.body.classList.remove('close');
+        });
+        hook.doneEach(function () {
+          document.body.classList.remove('close');
+        });
+      },
       function reportChrome(hook) {
         hook.doneEach(function () {
           var main = document.querySelector('.content');
