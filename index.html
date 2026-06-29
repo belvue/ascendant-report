@@ -19,9 +19,6 @@
       repo: 'belvue/ascendant-report',
       homepage: 'README.md',
       loadSidebar: false,
-      loadCoverpage: true,
-      coverpage: true,
-      onlyCover: false,
       subMaxLevel: 3,
       auto2top: true,
       relativePath: true,
@@ -43,8 +40,6 @@
     window.$docsify.plugins = [].concat(window.$docsify.plugins || [], [
       function reportChrome(hook) {
         hook.doneEach(function () {
-          if (document.querySelector('section.cover.show')) return;
-
           var main = document.querySelector('.content');
           var section = document.querySelector('.markdown-section');
           if (!main || !section) return;
