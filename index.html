@@ -10,21 +10,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css" />
   <link rel="stylesheet" href="assets/site/theme.css" />
 </head>
 <body>
   <div id="app">Loading report…</div>
   <script>
     window.$docsify = {
-      name:
-        '<div class="report-sidebar-brand">' +
-        '<span class="report-sidebar-title">Ascendant EQ</span>' +
-        '<span class="report-sidebar-sub">Investigation Report</span>' +
-        '</div>',
       repo: 'belvue/ascendant-report',
       homepage: 'README.md',
-      loadSidebar: true,
+      loadSidebar: false,
       loadCoverpage: true,
       coverpage: true,
       onlyCover: false,
@@ -33,11 +27,6 @@
       relativePath: true,
       maxLevel: 3,
       notFoundPage: true,
-      search: {
-        placeholder: 'Search chapters…',
-        noData: 'No matches',
-        depth: 4,
-      },
       pagination: {
         previousText: '← Previous',
         nextText: 'Next →',
@@ -93,7 +82,6 @@
     ]);
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>

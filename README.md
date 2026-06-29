@@ -1,6 +1,6 @@
 # Ascendant EQ - Investigation report
 
-> **Read online:** [belvue.github.io/ascendant-report](https://belvue.github.io/ascendant-report/) (sidebar, search, dark mode)
+> **Read online:** [belvue.github.io/ascendant-report](https://belvue.github.io/ascendant-report/) (chapter pagination, dark mode)
 
 This page is the whole story in plain language. Every **material factual claim** below points to a chapter, screenshot, probe log, or Discord permalink. Sentences that read between the lines are labeled as interpretation in the chapter they come from.
 
