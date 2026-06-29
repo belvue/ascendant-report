@@ -1,7 +1,5 @@
 # Ascendant EQ - Investigation report
 
-> **Read online:** [belvue.github.io/ascendant-report](https://belvue.github.io/ascendant-report/) (chapter nav, dark mode)
-
 This page is the whole story in plain language. Every **material factual claim** below points to a chapter, screenshot, probe log, or Discord permalink. Sentences that read between the lines are labeled as interpretation in the chapter they come from.
 
 This is not legal advice. Staff quotes stay in. Player and donor names stay out.
@@ -10,7 +8,7 @@ This is not legal advice. Staff quotes stay in. Player and donor names stay out.
 
 If you play on Ascendant EQ, or any server that patches through `downloads.ascendanteq.com`, your login may not go where you think it goes.
 
-The launcher can point EverQuest at **`login.eqemulator.dev`**. That is operator infrastructure, run by the same person who runs the server. It is not the usual community login at `login.eqemulator.net`. The patcher can rewrite that setting on every update. One successful game login through the `.dev` path can **copy your account record into the operator login database** (same account id, password hash stored there). You do not need a separate signup. Detail: [03-login-trust-boundary](03-login-trust-boundary.md#lspx-first-dev-login-copies-your-net-account).
+> The launcher can point EverQuest at **`login.eqemulator.dev`**. That is operator infrastructure, run by the same person who runs the server. It is not the usual community login at `login.eqemulator.net`. The patcher can rewrite that setting on every update. One successful game login through the `.dev` path can **copy your account record into the operator login database** (same account id, password hash stored there). You do not need a separate signup. Detail: [03-login-trust-boundary](03-login-trust-boundary.md#lspx-first-dev-login-copies-your-net-account).
 
 When you log in, your client sends your username and password to whatever host `eqhost.txt` names. EQEmu loginservers store **password hashes**, not plaintext passwords, in normal operation. Because the operator runs that login stack, they **control the login database**: hashes, backups, account resets, and federation copies to approved peers. That is how operator-controlled loginservers are built. It does **not** mean staff routinely see your password in cleartext. It **does** mean you are trusting their infrastructure with credentials you type into the client. Use a **unique password** you do not reuse on `login.eqemulator.net` or anywhere else.
 
