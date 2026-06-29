@@ -6,4 +6,4 @@ After pushing, enable once in the repo:
 
 The site URL will be: **https://belvue.github.io/ascendant-report/**
 
-GitHub Pages uses **Docsify** + `assets/site/theme.css` (not Jekyll). Dossier styling is in that CSS file; no `_config.yml` or SCSS build required.
+GitHub Pages uses **Docsify** with **`assets/site/theme.css`** — styled to match **EQ Compendium** (Obsidian Ascendant: warm parchment text, gold accent, Cinzel headings). No Jekyll/SCSS build required.

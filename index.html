@@ -4,20 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="dark" />
-  <meta name="theme-color" content="#0c0e12" />
+  <meta name="theme-color" content="#0b0b0d" />
   <meta name="description" content="Ascendant EQ public investigation report — login, hosting, donations, enforcement." />
   <title>Ascendant EQ · Investigation Report</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css" />
   <link rel="stylesheet" href="assets/site/theme.css" />
 </head>
 <body>
   <div id="app">Loading report…</div>
   <script>
     window.$docsify = {
-      name: 'Ascendant EQ',
+      name:
+        '<div class="report-sidebar-brand">' +
+        '<span class="report-sidebar-title">Ascendant EQ</span>' +
+        '<span class="report-sidebar-sub">Investigation Report</span>' +
+        '</div>',
       repo: 'belvue/ascendant-report',
       homepage: 'README.md',
       loadSidebar: true,
@@ -33,7 +37,6 @@
         placeholder: 'Search chapters…',
         noData: 'No matches',
         depth: 4,
-        hideOtherSidebarContent: false,
       },
       pagination: {
         previousText: '← Previous',
@@ -49,19 +52,41 @@
     };
 
     window.$docsify.plugins = [].concat(window.$docsify.plugins || [], [
-      function footer(hook) {
+      function reportChrome(hook) {
         hook.doneEach(function () {
-          var el = document.querySelector('.report-site-footer');
-          if (!el) {
-            el = document.createElement('div');
-            el.className = 'report-site-footer';
-            el.innerHTML =
+          if (document.querySelector('section.cover.show')) return;
+
+          var main = document.querySelector('.content');
+          var section = document.querySelector('.markdown-section');
+          if (!main || !section) return;
+
+          if (!document.querySelector('.report-topbar')) {
+            var topbar = document.createElement('div');
+            topbar.className = 'report-topbar';
+            topbar.innerHTML =
+              '<span class="report-topbar-label">Public record</span>' +
+              '<span class="report-topbar-title">Ascendant EQ Investigation</span>';
+            main.insertBefore(topbar, main.firstChild);
+          }
+
+          if (!section.closest('.report-article-panel')) {
+            var shell = document.createElement('div');
+            shell.className = 'report-article-shell';
+            var panel = document.createElement('div');
+            panel.className = 'report-article-panel';
+            section.parentNode.insertBefore(shell, section);
+            shell.appendChild(panel);
+            panel.appendChild(section);
+          }
+
+          var footer = document.querySelector('.report-site-footer');
+          if (!footer) {
+            footer = document.createElement('div');
+            footer.className = 'report-site-footer';
+            footer.innerHTML =
               'Public investigation package · ' +
               '<a href="https://github.com/belvue/ascendant-report" target="_blank" rel="noopener">Source on GitHub</a>';
-            var section = document.querySelector('.markdown-section');
-            if (section && section.parentNode) {
-              section.parentNode.appendChild(el);
-            }
+            main.appendChild(footer);
           }
         });
       },

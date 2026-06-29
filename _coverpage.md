@@ -1,10 +1,10 @@
 <!-- _coverpage.md -->
 
-![color](#0c0e12)
+![color](#0b0b0d)
 
 # Ascendant EQ
 
-> Investigation dossier · artifact-backed record for players and donors
+> Investigation dossier · artifact-backed public record
 
 [Start reading](#README)
 [Credential warning first](#00-credential-warning)
