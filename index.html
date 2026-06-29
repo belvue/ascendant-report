@@ -25,7 +25,7 @@
       loadSidebar: true,
       subMaxLevel: 0,
       auto2top: true,
-      relativePath: true,
+      relativePath: false,
       maxLevel: 3,
       notFoundPage: true,
       pagination: {
@@ -42,6 +42,50 @@
     };
 
     window.$docsify.plugins = [].concat(window.$docsify.plugins || [], [
+      function fixStackedRootLinks(hook, vm) {
+        var rootOnly = {
+          '00-credential-warning.md': 1,
+          '01-why-this-exists.md': 1,
+          '01b-before-going-public.md': 1,
+          '02-executive-summary.md': 1,
+          '03-login-trust-boundary.md': 1,
+          '03b-loginserver-lab-methodology.md': 1,
+          '04-infrastructure-security.md': 1,
+          '04b-operational-security.md': 1,
+          '05-donations-moa-kofi.md': 1,
+          '06-enforcement-asymmetry.md': 1,
+          '07-anti-cheat-and-patcher.md': 1,
+          '08-referrals-leaderboards.md': 1,
+          '09-botwatch-methodology.md': 1,
+          '09b-botwatch-capabilities.md': 1,
+          '10-witness-summary.md': 1,
+          '11-hosting-cost-gap.md': 1,
+          '12-operator-presence.md': 1,
+          '13-what-you-can-do.md': 1,
+          '14-reporter-account.md': 1,
+          '14b-preliminary-rca.md': 1,
+          '14c-may-5-ledger-audit.md': 1,
+          '14d-anti-cheat-layers.md': 1,
+          '15-closing-statements.md': 1,
+          'evidence-index.md': 1,
+        };
+
+        hook.beforeEach(function (content, next) {
+          var path = (vm.route.path || '').replace(/^\//, '');
+          if (!path || path.indexOf('/') === -1) {
+            next(content);
+            return;
+          }
+          var parts = path.split('/');
+          var last = parts[parts.length - 1];
+          var file = /\.[a-z0-9]+$/i.test(last) ? last : last + '.md';
+          if (rootOnly[file]) {
+            vm.router.to('/' + file);
+            return;
+          }
+          next(content);
+        });
+      },
       function pinSidebar(hook) {
         hook.mounted(function () {
           document.body.classList.remove('close');
