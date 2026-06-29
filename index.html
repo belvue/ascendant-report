@@ -4,187 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="dark" />
-  <meta name="description" content="Ascendant EQ public investigation report" />
-  <title>Ascendant EQ Investigation Report</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css" />
-  <style>
-    :root {
-      --theme-color: #7eb8da;
-      --theme-color-dark: #5a9bc4;
-      --text-color: #c8cdd3;
-      --text-color-secondary: #9aa3ad;
-      --border-color: #2d333b;
-      --bg-body: #141820;
-      --bg-sidebar: #101419;
-      --bg-code: #1c2129;
-      --link-color: #8ecae6;
-    }
-
-    body {
-      background: var(--bg-body);
-      color: var(--text-color);
-    }
-
-    .sidebar {
-      width: 18rem;
-      background: var(--bg-sidebar);
-      border-right: 1px solid var(--border-color);
-    }
-
-    .sidebar-nav li a {
-      color: var(--text-color-secondary);
-    }
-
-    .sidebar-nav li a:hover,
-    .sidebar-nav li.active > a {
-      color: var(--link-color);
-    }
-
-    .app-name {
-      color: #dde3ea !important;
-      font-weight: 600;
-    }
-
-    .markdown-section {
-      max-width: 48rem;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-      font-size: 1.02rem;
-      line-height: 1.7;
-      color: var(--text-color);
-    }
-
-    .markdown-section h1 {
-      font-size: 1.85rem;
-      color: #e6eaef;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 0.45rem;
-    }
-
-    .markdown-section h2 {
-      font-size: 1.35rem;
-      color: #dfe4ea;
-      margin-top: 2rem;
-    }
-
-    .markdown-section h3 {
-      font-size: 1.12rem;
-      color: #d4d9e0;
-    }
-
-    .markdown-section a {
-      color: var(--link-color);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(142, 202, 230, 0.25);
-    }
-
-    .markdown-section a:hover {
-      border-bottom-color: var(--link-color);
-    }
-
-    .markdown-section blockquote {
-      border-left: 3px solid #4a6278;
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text-color-secondary);
-      margin: 1rem 0;
-      padding: 0.6rem 1rem;
-    }
-
-    .markdown-section table {
-      display: block;
-      overflow-x: auto;
-      font-size: 0.92rem;
-      border-collapse: collapse;
-    }
-
-    .markdown-section th,
-    .markdown-section td {
-      border-color: var(--border-color);
-    }
-
-    .markdown-section tr:nth-child(2n) {
-      background: rgba(255, 255, 255, 0.02);
-    }
-
-    .markdown-section img {
-      max-width: 100%;
-      border: 1px solid var(--border-color);
-      border-radius: 4px;
-      background: #0d1014;
-    }
-
-    .markdown-section code {
-      background: var(--bg-code);
-      color: #d4dbe4;
-      border-radius: 3px;
-      padding: 0.12em 0.35em;
-    }
-
-    .markdown-section pre {
-      background: var(--bg-code) !important;
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-    }
-
-    .markdown-section hr {
-      border-color: var(--border-color);
-    }
-
-    .search {
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .search input {
-      background: var(--bg-code);
-      color: var(--text-color);
-      border: 1px solid var(--border-color);
-    }
-
-    .search input::placeholder {
-      color: #6b7280;
-    }
-
-    .pagination-item-title {
-      color: var(--text-color-secondary);
-    }
-
-    .sidebar-nav > ul > li > p {
-      font-weight: 600;
-      margin-top: 0.75rem;
-      color: #aeb6c0;
-    }
-
-    @media (max-width: 768px) {
-      .sidebar { width: 16rem; }
-    }
-  </style>
+  <meta name="theme-color" content="#0c0e12" />
+  <meta name="description" content="Ascendant EQ public investigation report — login, hosting, donations, enforcement." />
+  <title>Ascendant EQ · Investigation Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <link rel="stylesheet" href="assets/site/theme.css" />
 </head>
 <body>
   <div id="app">Loading report…</div>
   <script>
     window.$docsify = {
-      name: 'Ascendant EQ Report',
+      name: 'Ascendant EQ',
       repo: 'belvue/ascendant-report',
       homepage: 'README.md',
       loadSidebar: true,
+      loadCoverpage: true,
+      coverpage: true,
+      onlyCover: false,
       subMaxLevel: 3,
       auto2top: true,
       relativePath: true,
       maxLevel: 3,
+      notFoundPage: true,
       search: {
         placeholder: 'Search chapters…',
         noData: 'No matches',
         depth: 4,
+        hideOtherSidebarContent: false,
       },
       pagination: {
-        previousText: 'Previous',
-        nextText: 'Next',
+        previousText: '← Previous',
+        nextText: 'Next →',
         crossChapter: true,
+        crossChapterText: true,
+      },
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'Copied',
       },
     };
+
+    window.$docsify.plugins = [].concat(window.$docsify.plugins || [], [
+      function footer(hook) {
+        hook.doneEach(function () {
+          var el = document.querySelector('.report-site-footer');
+          if (!el) {
+            el = document.createElement('div');
+            el.className = 'report-site-footer';
+            el.innerHTML =
+              'Public investigation package · ' +
+              '<a href="https://github.com/belvue/ascendant-report" target="_blank" rel="noopener">Source on GitHub</a>';
+            var section = document.querySelector('.markdown-section');
+            if (section && section.parentNode) {
+              section.parentNode.appendChild(el);
+            }
+          }
+        });
+      },
+    ]);
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 </body>
 </html>

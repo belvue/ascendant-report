@@ -1,7 +1,6 @@
 # Ascendant EQ - Investigation report
 
-> **Formatted reading (sidebar, search):** [belvue.github.io/ascendant-report](https://belvue.github.io/ascendant-report/)  
-> This repo is markdown source; use the link above for a documentation-style view.
+> **Read online:** [belvue.github.io/ascendant-report](https://belvue.github.io/ascendant-report/) (sidebar, search, dark mode)
 
 This page is the whole story in plain language. Every **material factual claim** below points to a chapter, screenshot, probe log, or Discord permalink. Sentences that read between the lines are labeled as interpretation in the chapter they come from.
 
