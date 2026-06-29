@@ -1,26 +1,29 @@
-/* Ascendant report — professional dark documentation theme */
+/* Ascendant report — investigation dossier theme (Docsify)
+   Adapted for .markdown-section; Jekyll .markdown-body rules live here equivalent. */
 
 :root {
-  --bg-base: #0c0e12;
-  --bg-raised: #13161d;
-  --bg-sidebar: #0a0c10;
-  --bg-code: #181c24;
+  --bg-base: #0a0f16;
+  --bg-mid: #0f1621;
+  --bg-top: #0b111a;
+  --bg-card: rgba(10, 16, 24, 0.72);
+  --bg-sidebar: #080b10;
+  --bg-code: rgba(112, 215, 255, 0.1);
   --bg-hover: rgba(255, 255, 255, 0.04);
-  --border: #252a34;
-  --border-subtle: #1e222b;
-  --text: #d1d7e0;
-  --text-heading: #eef1f5;
+  --border: rgba(125, 185, 255, 0.12);
+  --border-strong: rgba(125, 185, 255, 0.16);
+  --text: #d9e2ee;
+  --text-heading: #f2f6fb;
+  --text-h3: #f7fbff;
   --text-muted: #8b95a5;
-  --accent: #5eb3d6;
-  --accent-soft: rgba(94, 179, 214, 0.12);
-  --accent-border: rgba(94, 179, 214, 0.35);
-  --warn-border: #6b5a3e;
-  --warn-bg: rgba(180, 140, 70, 0.08);
-  --radius: 8px;
-  --radius-sm: 5px;
+  --accent: #70d7ff;
+  --accent-hover: #a7ecff;
+  --accent-soft: rgba(112, 215, 255, 0.08);
+  --accent-chip-border: rgba(112, 215, 255, 0.16);
+  --radius: 18px;
+  --radius-sm: 10px;
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
-  --content-width: 44rem;
+  --content-width: 57.5rem;
   --sidebar-width: 19rem;
   --theme-color: var(--accent);
 }
@@ -35,11 +38,12 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--bg-base);
-  background-image:
-    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(94, 179, 214, 0.06), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(40, 60, 90, 0.08), transparent 50%);
+  font-size: 17px;
+  line-height: 1.72;
   color: var(--text);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(90, 180, 255, 0.08), transparent 30rem),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 55%, var(--bg-base) 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -48,13 +52,13 @@ body {
 .sidebar {
   width: var(--sidebar-width);
   background: var(--bg-sidebar);
-  border-right: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--border);
 }
 
 .sidebar-toggle {
-  background: var(--bg-raised);
+  background: rgba(10, 16, 24, 0.9);
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  border-radius: 8px;
 }
 
 .app-name {
@@ -63,28 +67,22 @@ body {
   letter-spacing: -0.02em;
   color: var(--text-heading) !important;
   padding: 1.25rem 1rem 0.5rem !important;
-  line-height: 1.35 !important;
-}
-
-.app-name-link {
-  text-decoration: none !important;
 }
 
 .search {
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border);
   padding: 0.75rem 1rem;
 }
 
 .search .input-wrap {
-  background: var(--bg-code);
+  background: rgba(10, 16, 24, 0.85);
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  transition: border-color 0.15s ease;
+  border-radius: 8px;
 }
 
 .search .input-wrap:focus-within {
-  border-color: var(--accent-border);
-  box-shadow: 0 0 0 3px var(--accent-soft);
+  border-color: var(--accent-chip-border);
+  box-shadow: 0 0 0 3px rgba(112, 215, 255, 0.1);
 }
 
 .search input {
@@ -93,29 +91,11 @@ body {
   font-size: 0.875rem;
 }
 
-.search input::placeholder {
-  color: var(--text-muted);
-}
-
-.sidebar-nav {
-  padding: 0.5rem 0 2rem;
-}
-
-.sidebar-nav ul {
-  margin: 0;
-}
-
-.sidebar-nav li {
-  margin: 0;
-}
-
 .sidebar-nav li a {
   color: var(--text-muted);
   font-size: 0.8125rem;
-  font-weight: 450;
   padding: 0.35rem 1rem 0.35rem 1.25rem;
   border-left: 2px solid transparent;
-  transition: color 0.12s ease, background 0.12s ease, border-color 0.12s ease;
 }
 
 .sidebar-nav li a:hover {
@@ -125,7 +105,7 @@ body {
 
 .sidebar-nav li.active > a {
   color: var(--accent);
-  background: var(--accent-soft);
+  background: rgba(112, 215, 255, 0.1);
   border-left-color: var(--accent);
   font-weight: 500;
 }
@@ -138,59 +118,78 @@ body {
   text-transform: uppercase;
   color: var(--text-muted);
   margin: 1.25rem 1rem 0.35rem;
-  opacity: 0.85;
 }
 
-/* Main content */
 .content {
-  padding-top: 0;
+  padding: 1.5rem 1.25rem 2rem;
 }
 
+/* Dossier reading card */
 .markdown-section {
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 2.5rem 2rem 5rem;
-  font-size: 1.015rem;
-  line-height: 1.75;
+  padding: 3rem;
+  font-size: 1.0625rem;
+  line-height: 1.72;
   color: var(--text);
-}
-
-.markdown-section > *:first-child {
-  margin-top: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
 }
 
 .markdown-section h1 {
-  font-size: 2rem;
-  font-weight: 650;
-  letter-spacing: -0.03em;
+  font-size: 2.35rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
   color: var(--text-heading);
   margin: 0 0 1.25rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--border);
-  line-height: 1.25;
+  padding-bottom: 0;
+  border-bottom: none;
+  line-height: 1.2;
 }
 
 .markdown-section h2 {
-  font-size: 1.375rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-strong);
   color: var(--text-heading);
-  margin: 2.5rem 0 1rem;
-  padding-top: 0.5rem;
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.markdown-section h2:first-of-type {
+  margin-top: 2rem;
+  border-top: none;
+  padding-top: 0;
 }
 
 .markdown-section h3 {
-  font-size: 1.0625rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-h3);
+  font-size: 1.12rem;
   font-weight: 600;
-  color: #c5cdd8;
-  margin: 1.75rem 0 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: none;
+}
+
+/* Hide redundant rule right under dossier section labels */
+.markdown-section h3 + hr {
+  display: none;
+}
+
+.markdown-section h3 + p {
+  margin-top: 0.8rem;
 }
 
 .markdown-section h4 {
   font-size: 0.9375rem;
   font-weight: 600;
   color: var(--text-muted);
-  margin: 1.25rem 0 0.5rem;
+  margin: 1.5rem 0 0.5rem;
 }
 
 .markdown-section p {
@@ -205,23 +204,40 @@ body {
 .markdown-section a {
   color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px solid rgba(94, 179, 214, 0.25);
-  transition: border-color 0.12s ease, color 0.12s ease;
+  font-weight: 600;
+  border-bottom: none;
 }
 
 .markdown-section a:hover {
-  color: #7ec8e8;
-  border-bottom-color: rgba(126, 200, 232, 0.55);
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Jump-nav pills (e.g. Login · Money · … under "The story") */
+.markdown-section h2 + p a {
+  display: inline-block;
+  margin: 0.18rem 0.1rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-chip-border);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.markdown-section h2 + p a:hover {
+  background: rgba(112, 215, 255, 0.14);
+  color: var(--accent-hover);
 }
 
 .markdown-section blockquote {
-  margin: 1.25rem 0;
-  padding: 0.85rem 1.1rem;
-  border-left: 3px solid var(--warn-border);
-  background: var(--warn-bg);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  color: #b8c0cc;
-  font-size: 0.9375rem;
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+  color: #dce8f5;
+  background: rgba(255, 255, 255, 0.035);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
 }
 
 .markdown-section blockquote p {
@@ -229,9 +245,9 @@ body {
 }
 
 .markdown-section hr {
-  border: none;
   height: 1px;
-  background: var(--border);
+  background: linear-gradient(90deg, transparent, rgba(112, 215, 255, 0.28), transparent);
+  border: 0;
   margin: 2.5rem 0;
 }
 
@@ -239,10 +255,6 @@ body {
 .markdown-section ol {
   padding-left: 1.35rem;
   margin: 0 0 1.1rem;
-}
-
-.markdown-section li {
-  margin: 0.35rem 0;
 }
 
 .markdown-section table {
@@ -253,84 +265,61 @@ body {
   border-collapse: collapse;
   margin: 1.25rem 0;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-raised);
-}
-
-.markdown-section thead {
-  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  background: rgba(10, 16, 24, 0.5);
 }
 
 .markdown-section th {
   font-weight: 600;
   color: var(--text-heading);
-  text-align: left;
   padding: 0.65rem 0.85rem;
   border-bottom: 1px solid var(--border);
 }
 
 .markdown-section td {
   padding: 0.6rem 0.85rem;
-  border-bottom: 1px solid var(--border-subtle);
-  vertical-align: top;
-}
-
-.markdown-section tr:last-child td {
-  border-bottom: none;
-}
-
-.markdown-section tr:nth-child(even) td {
-  background: rgba(255, 255, 255, 0.015);
+  border-bottom: 1px solid rgba(125, 185, 255, 0.08);
 }
 
 .markdown-section code {
   font-family: var(--font-mono);
-  font-size: 0.84em;
+  font-size: 0.9em;
   background: var(--bg-code);
-  color: #c5d0dc;
-  padding: 0.15em 0.4em;
-  border-radius: 4px;
-  border: 1px solid var(--border-subtle);
+  color: #d7f6ff;
+  border: 1px solid rgba(112, 215, 255, 0.18);
+  border-radius: 6px;
+  padding: 0.12em 0.38em;
 }
 
 .markdown-section pre {
   margin: 1.25rem 0;
   padding: 1rem 1.15rem;
-  background: var(--bg-code) !important;
+  background: rgba(10, 16, 24, 0.9) !important;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   overflow-x: auto;
 }
 
 .markdown-section pre code {
-  font-size: 0.8125rem;
-  line-height: 1.55;
   background: transparent;
   border: none;
   padding: 0;
-  color: #b8c4d4;
+  color: #b8d4e8;
 }
 
 .markdown-section img {
   max-width: 100%;
-  height: auto;
   margin: 1.25rem 0;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: #080a0d;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  border-radius: var(--radius-sm);
+  background: #06080c;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
-/* GitHub-style alerts from blockquotes starting with > ** */
-.markdown-section blockquote:has(strong:first-child) {
-  border-left-color: var(--accent-border);
-  background: var(--accent-soft);
-}
-
-/* Pagination */
 .docsify-pagination-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
   border-top: 1px solid var(--border);
-  margin-top: 3rem;
   padding-top: 1.5rem;
 }
 
@@ -340,40 +329,21 @@ body {
   font-size: 0.8125rem;
 }
 
-.pagination-item-title:hover {
-  color: var(--accent) !important;
-}
-
-/* Cover page */
+/* Cover */
 section.cover {
-  background: var(--bg-base) !important;
+  background: var(--bg-top) !important;
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(94, 179, 214, 0.1), transparent 60%),
-    linear-gradient(180deg, #0c0e12 0%, #0a0c10 100%) !important;
-}
-
-section.cover .cover-main {
-  max-width: 36rem;
+    radial-gradient(circle at 20% 0%, rgba(90, 180, 255, 0.12), transparent 30rem),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-base) 100%) !important;
 }
 
 section.cover h1 {
   font-size: 2.75rem !important;
-  font-weight: 700 !important;
   letter-spacing: -0.04em !important;
   color: var(--text-heading) !important;
-  text-shadow: none !important;
 }
 
 section.cover p {
-  color: var(--text-muted) !important;
-  font-size: 1.125rem !important;
-  line-height: 1.6 !important;
-}
-
-section.cover blockquote {
-  border: none !important;
-  background: transparent !important;
-  font-size: 1rem !important;
   color: var(--text-muted) !important;
 }
 
@@ -382,80 +352,69 @@ section.cover a {
   margin: 0.35rem 0.5rem 0.35rem 0;
   padding: 0.55rem 1.15rem;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-heading) !important;
-  background: var(--bg-raised);
+  background: var(--bg-card);
   border: 1px solid var(--border) !important;
-  border-radius: var(--radius-sm);
+  border-radius: 999px;
   text-decoration: none !important;
-  transition: border-color 0.15s ease, background 0.15s ease;
 }
 
 section.cover a:hover {
-  border-color: var(--accent-border) !important;
-  background: var(--accent-soft);
+  border-color: var(--accent-chip-border) !important;
   color: var(--accent) !important;
 }
 
-section.cover a.cover-show {
-  position: absolute;
-  bottom: 1.5rem;
-  border: none !important;
-  background: transparent !important;
-  color: var(--text-muted) !important;
-  font-size: 0.75rem;
-}
-
-/* Search results */
 .search .results-panel {
-  background: var(--bg-raised);
+  background: rgba(10, 16, 24, 0.95);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
-.search .matching-keyword {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-/* Medium zoom overlay */
 .medium-zoom-overlay {
   background: rgba(8, 10, 14, 0.92) !important;
 }
 
-/* Site footer (injected) */
 .report-site-footer {
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 0 2rem 2.5rem;
+  padding: 1.25rem 3rem 2.5rem;
   font-size: 0.75rem;
   color: var(--text-muted);
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 1.25rem;
 }
 
 .report-site-footer a {
   color: var(--text-muted);
-  border-bottom: 1px solid transparent;
 }
 
 .report-site-footer a:hover {
   color: var(--accent);
 }
 
-@media (max-width: 768px) {
-  :root {
-    --sidebar-width: 17rem;
+@media (max-width: 760px) {
+  body {
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 0;
   }
 
   .markdown-section {
-    padding: 1.75rem 1.25rem 4rem;
-    font-size: 1rem;
+    padding: 1.35rem;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
   }
 
   .markdown-section h1 {
-    font-size: 1.65rem;
+    font-size: 1.85rem;
+  }
+
+  .report-site-footer {
+    padding: 1rem 1.35rem 2rem;
   }
 }
 

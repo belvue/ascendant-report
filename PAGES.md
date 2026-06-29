@@ -6,4 +6,4 @@ After pushing, enable once in the repo:
 
 The site URL will be: **https://belvue.github.io/ascendant-report/**
 
-Uses [Docsify](https://docsify.js.org/) (`index.html` + `_sidebar.md`). Raw markdown browsing on github.com stays available; the Pages URL is the readable doc view.
+GitHub Pages uses **Docsify** + `assets/site/theme.css` (not Jekyll). Dossier styling is in that CSS file; no `_config.yml` or SCSS build required.
